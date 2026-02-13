@@ -6,6 +6,7 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
+    "db:init": "psql -U postgres -c \"CREATE DATABASE substation_registry WITH ENCODING 'UTF8';\" && psql -U postgres -d substation_registry -f database.sql",
     "start": "node server.js"
   },
   "dependencies": {
